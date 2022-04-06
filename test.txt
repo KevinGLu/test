@@ -9,3 +9,21 @@ end
 end
 endmodule
 // Note: === and !==
+
+
+
+
+
+
+// check results on falling edge of clk
+always @(negedge clk)
+if (~reset) // skip during reset
+begin
+if (y !== yexpected)
+begin
+$display("Error: inputs = %b", {a, b, c});
+$display(" outputs = %b (%b exp)",y,yexpected);
+errors = errors + 1;
+end
+// Note: to print in hexadecimal, use %h. For example,
+// $display(“Error: inputs = %h”, {a, b, c});
