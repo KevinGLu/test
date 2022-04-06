@@ -1,0 +1,11 @@
+// increment array index and read next testvector
+vectornum = vectornum + 1;
+if (testvectors[vectornum] === 4'bx)
+begin
+$display("%d tests completed with %d errors",
+vectornum, errors);
+$finish; // End simulation
+end
+end
+endmodule
+// Note: === and !==
