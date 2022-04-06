@@ -26,4 +26,10 @@ $display(" outputs = %b (%b exp)",y,yexpected);
 errors = errors + 1;
 end
 // Note: to print in hexadecimal, use %h. For example,
-// $display(“Error: inputs = %h”, {a, b, c});3
+// $display(“Error: inputs = %h”, {a, b, c});
+
+
+
+1
+2
+3
